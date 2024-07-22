@@ -33,7 +33,7 @@
                 <td>Not Protected</td>
                 @endif
                 <td>
-                    <a class="btn btn-primary btn-sm" href="#" role="button">Show</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('pages.show', $animal) }}" role="button">Show</a>
                     <a class="btn btn-danger btn-sm" href="#" role="button">Delete</a>
                     <a class="btn btn-success btn-sm" href="#" role="button">Show</a>
                 </td>

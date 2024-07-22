@@ -14,7 +14,7 @@ class AnimalController extends Controller
     }
 
     public function show(Animal $animal){
-        // $animal = Animal::findOrFail($post);
+
         return view('pages.show', compact('animal'));
     }
 }
