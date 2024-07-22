@@ -1,0 +1,21 @@
+scientific_name,common_name,name,birthday,taxonomic_group,class,family,species,habitat,protected
+Panthera leo,Lion,Leo,2000-01-01,Mammalia,Mammal,Felidae,Leo,Savanna,1
+Elephas maximus,Asian Elephant,Maximus,2000-12-31,Mammalia,Mammal,Elephantidae,Maximus,Forest,1
+Gorilla gorilla,Western Gorilla,Gorilla,2001-12-31,Mammalia,Mammal,Hominidae,Gorilla,Forest,0
+Ailuropoda melanoleuca,Giant Panda,Panda,2002-12-31,Mammalia,Mammal,Ursidae,Melanoleuca,Forest,1
+Equus quagga,Plains Zebra,Zebra,2003-12-31,Mammalia,Mammal,Equidae,Quagga,Savanna,0
+Acinonyx jubatus,Cheetah,Cheetah,2004-12-30,Mammalia,Mammal,Felidae,Jubatus,Savanna,0
+Haliaeetus leucocephalus,Bald Eagle,Eagle,2005-12-30,Aves,Bird,Accipitridae,Leucocephalus,Forests and Wetlands,1
+Aptenodytes forsteri,Emperor Penguin,Penguin,2006-12-30,Aves,Bird,Spheniscidae,Forsteri,Antarctica,1
+Balaenoptera musculus,Blue Whale,Whale,2007-12-30,Mammalia,Mammal,Balaenopteridae,Musculus,Ocean,0
+Delphinus delphis,Common Dolphin,Dolphin,2008-12-29,Mammalia,Mammal,Delphinidae,Delphis,Ocean,0
+Ursus maritimus,Polar Bear,Polar,2009-12-29,Mammalia,Mammal,Ursidae,Maritimus,Arctic,1
+Panthera onca,Jaguar,Jaguar,2010-12-29,Mammalia,Mammal,Felidae,Onca,Rainforest,1
+Canis lupus,Gray Wolf,Wolf,2011-12-29,Mammalia,Mammal,Canidae,Lupus,Forest,0
+Vulpes vulpes,Red Fox,Fox,2012-12-28,Mammalia,Mammal,Canidae,Vulpes,Forest,1
+Lynx lynx,Eurasian Lynx,Lynx,2013-12-28,Mammalia,Mammal,Felidae,Lynx,Forest,0
+Loxodonta africana,African Elephant,Elephant,2014-12-28,Mammalia,Mammal,Elephantidae,Africana,Savanna,0
+Tursiops truncatus,Bottlenose Dolphin,Dolphin,2015-12-28,Mammalia,Mammal,Delphinidae,Truncatus,Ocean,1
+Giraffa camelopardalis,Giraffe,Giraffe,2016-12-27,Mammalia,Mammal,Giraffidae,Camelopardalis,Savanna,1
+Panthera pardus,Leopard,Leopard,2017-12-27,Mammalia,Mammal,Felidae,Pardus,Rainforest,0
+Gorilla beringei,Mountain Gorilla,Gorilla,2018-12-27,Mammalia,Mammal,Hominidae,Beringei,Mountain Forest,0
