@@ -31,6 +31,15 @@
                 @else
                 <td>Not Protected</td>
                 @endif
+                <td>
+                    <a class="btn btn-primary btn-sm" href="#" role="button">Show</a>
+                </td>
+                <td>
+                    <a class="btn btn-danger btn-sm" href="#" role="button">Delete</a>
+                </td>
+                <td>
+                    <a class="btn btn-success btn-sm" href="#" role="button">Show</a>
+                </td>
             </tr>
             @endforeach
         </tbody>
