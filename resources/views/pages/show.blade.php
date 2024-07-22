@@ -18,7 +18,6 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($animals as $animal)
             <tr>
                 <th scope="row">{{$animal->id}}</th>
                 <td>{{$animal->scientific_name}}</td>
@@ -38,7 +37,6 @@
                     <a class="btn btn-success btn-sm" href="#" role="button">Show</a>
                 </td>
             </tr>
-            @endforeach
         </tbody>
     </table>
 @endsection

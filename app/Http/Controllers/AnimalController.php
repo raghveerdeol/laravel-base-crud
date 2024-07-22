@@ -13,7 +13,8 @@ class AnimalController extends Controller
         return view('pages.home', compact('animals'));
     }
 
-    public function show(string $post){
-
+    public function show(Animal $animal){
+        // $animal = Animal::findOrFail($post);
+        return view('pages.show', compact('animal'));
     }
 }
