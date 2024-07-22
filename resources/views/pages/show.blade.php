@@ -3,40 +3,36 @@
 @section('title','Homepage')
 
 @section('main-content')
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Scientific Name</th>
-                <th scope="col">Name</th>
-                <th scope="col">Birthday</th>
-                <th scope="col">Family</th>
-                <th scope="col">Species</th>
-                <th scope="col">Habitat</th>
-                <th scope="col">Protected</th>
-                <th scope="col">Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">{{$animal->id}}</th>
-                <td>{{$animal->scientific_name}}</td>
-                <td>{{$animal->name}}</td>
-                <td>{{$animal->birthday}}</td>
-                <td>{{$animal->family}}</td>
-                <td>{{$animal->species}}</td>
-                <td>{{$animal->habitat}}</td>
-                @if ($animal->protected === 1)
-                <td>Protected</td>
-                @else
-                <td>Not Protected</td>
-                @endif
-                <td>
-                    <a class="btn btn-primary btn-sm" href="#" role="button">Show</a>
+
+<div class="container">
+    <div class="row justify-content-center p-5">
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Scientific-name: {{$animal->scientific_name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Name: {{$animal->name}} - Birthday: {{$animal->birthday}}</h6>
+                    <p class="card-text">Class: {{$animal->class}} - Family: {{$animal->family}} - Species: {{$animal->species}}</p>
+                    <p class="card-text">Habitat: {{$animal->habitat}}</p>
+                    @if ($animal->protected === 1)
+                    <p class="card-text">Protected</p>
+                    @else
+                    <p class="card-text">Not Protected</p>
+                    @endif
+                    <td>
                     <a class="btn btn-danger btn-sm" href="#" role="button">Delete</a>
-                    <a class="btn btn-success btn-sm" href="#" role="button">Show</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                    <a class="btn btn-success btn-sm" href="#" role="button">Edite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="container">
+        <div class="row justify-content-center p-5">
+            <div class="col-2">
+                <a class="btn btn-primary" href="{{ route('pages.home')}}" role="button">Show all</a>
+            </div>
+        </div>
+    </div>
 @endsection
