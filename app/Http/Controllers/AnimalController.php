@@ -12,4 +12,8 @@ class AnimalController extends Controller
 
         return view('pages.home', compact('animals'));
     }
+
+    public function show(string $post){
+
+    }
 }
