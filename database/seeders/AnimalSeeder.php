@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Functions\Helpers;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
@@ -12,7 +13,7 @@ class AnimalSeeder extends Seeder
 {
     public function run(Faker $faker): void
     {
-        $animalsData = $this->getCsvData(__DIR__ . '/animals.csv');
+        $animalsData = Helpers::getCsvData(__DIR__ . '/animals.csv');
         foreach ($animalsData as $index => $singleAnimalData) {
             if ($index > 0){
                 $newAnimal = new Animal();
@@ -31,22 +32,4 @@ class AnimalSeeder extends Seeder
         }
     }
 
-    public function getCsvData($filePath){
-        $csvData = [];
-        //apriamo il file
-        //r = read visto che dobbiamo solo leggere il file
-        $fileData = fopen($filePath, 'r');
-        //se non trovi il file
-        if($fileData === false){
-            throw new InvalidArgumentException('file not found, check your path');
-        }
-        //se lo trovi e finchè $csvRow non è false
-        while(($csvRow = fgetcsv($fileData)) !== false) {
-            // aggiungo il file a csvData
-            $csvData[] = $csvRow;
-        }
-        //chiudiamo il file
-        fclose($fileData);
-        return $csvData;
-    }
 }
