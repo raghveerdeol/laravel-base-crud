@@ -17,4 +17,9 @@ class AnimalController extends Controller
 
         return view('pages.show', compact('animal'));
     }
+
+    public function create(){
+
+        return view('pages.create');
+    }
 }
