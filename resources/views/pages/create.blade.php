@@ -26,7 +26,7 @@
                     <input class="form-control form-control-sm" type="text" placeholder="Name" aria-label="Name" id="name" name="name">
 
                     <label for="birthday">Birthday</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Birthday" aria-label="Birthday" id="scientific-name" name="birthday">
+                    <input class="form-control form-control-sm" type="date" placeholder="Birthday" aria-label="Birthday" id="scientific-name" name="birthday">
 
                     <label for="taxonomic_group">Taxonomic Group</label>
                     <input class="form-control form-control-sm" type="text" placeholder="Taxonomic Group" aria-label="Taxonomic Group" id="scientific-name" name="taxonomic_group">
@@ -43,8 +43,23 @@
                     <label for="habitat">Habitat</label>
                     <input class="form-control form-control-sm" type="text" placeholder="Habitat" aria-label="Habitat" id="scientific-name" name="habitat">
 
-                    <label for="protected">Protected</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Protected" aria-label="Protected" id="scientific-name" name="protected">
+                    {{-- <label for="protected">Protected</label>
+                    <input class="form-control form-control-sm" type="text" placeholder="Protected" aria-label="Protected" id="scientific-name" name="protected"> --}}
+
+                    <div class="form-check">
+                        <input class="form-check-input" value="1" type="radio" name="protected" id="protected-1">
+                        <label class="form-check-label" for="protected1">
+                        Protected
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" value="0" type="radio" name="protected" id="protected-2" checked>
+                        <label class="form-check-label" for="protected2">
+                        Not Protected
+                        </label>
+                    </div>
+
+                    <input type="submit" class="btn btn-primary mt-5" value="Add new animal">
                 </form>
             </div>
         </div>
