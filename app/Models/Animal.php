@@ -9,7 +9,16 @@ class Animal extends Model
 {
     use HasFactory;
 
-    // protected $filable = {
-
-    // }
+    protected $fillable = [
+        'scientific_name',
+        'common_name',
+        'name',
+        'birthday',
+        'taxonomic_group',
+        'class',
+        'family',
+        'species',
+        'habitat',
+        'protected',
+    ];
 }
