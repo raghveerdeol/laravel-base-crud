@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Animal extends Model
 {
     use HasFactory;
+
+    // protected $filable = {
+
+    // }
 }
