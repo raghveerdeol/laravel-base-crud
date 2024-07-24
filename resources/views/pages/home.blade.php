@@ -42,14 +42,19 @@
                 <td>
                     <a class="btn btn-primary btn-sm" href="{{ route('pages.show', $animal) }}" role="button">Show</a>
                     <a class="btn btn-success btn-sm" href="{{ route('pages.edit', $animal) }}" role="button">Edit</a>
-                    <form action="{{ route('pages.destroy', $animal)}}" class="d-inline-block" method="POST">
+                    <form action="{{ route('pages.destroy', $animal)}}" class="d-inline-block delete-btn" method="POST">
                         @method('DELETE')
                         @csrf
                         <input class="btn btn-danger btn-sm" type="submit" value="Delete" role="button"></input>
                     </form>
                 </td>
             </tr>
+
             @endforeach
+
         </tbody>
     </table>
+    @endsection
+    @section('custom-scripts')
+    @vite('resources/js/delete-alert.js')
 @endsection

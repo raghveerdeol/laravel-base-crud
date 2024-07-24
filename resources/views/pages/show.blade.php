@@ -40,3 +40,5 @@
         </div>
     </div>
 @endsection
+@vite('resources/js/delete-alert.js')
+
