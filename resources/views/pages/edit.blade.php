@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <form action="{{ route('pages.update', $animal) }}" method="POST">
+                <form action="{{ route('pages.update', $animal) }}" method="POST" id='edit-form'>
                     @method('PUT')
                     @csrf
                     <label for="scientific_name">Scientific name</label>
@@ -66,3 +66,4 @@
         </div>
     </div>
 @endsection
+@vite('resources/js/update-alert.js')
