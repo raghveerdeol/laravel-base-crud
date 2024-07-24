@@ -44,7 +44,12 @@ class AnimalController extends Controller
     }
 
     public function edit(Animal $animal){
-
         return view('pages.edit', compact('animal'));
+    }
+
+    public function update(Request $request, Animal $animal){
+        $data = $request->all();
+        $animal->update($data);
+        return redirect()->route('pages.show', $animal);
     }
 }

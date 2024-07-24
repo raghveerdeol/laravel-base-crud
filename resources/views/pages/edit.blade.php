@@ -14,7 +14,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <form action="{{ route('pages.store') }}" method="POST">
+                <form action="{{ route('pages.update', $animal) }}" method="POST">
+                    @method('PUT')
                     @csrf
                     <label for="scientific_name">Scientific name</label>
                     <input class="form-control form-control-sm" type="text" placeholder="Scientific name" aria-label="Scientific name" id="scientific-name" name="scientific_name" value="{{ $animal->scientific_name}}">
@@ -59,7 +60,7 @@
                         </label>
                     </div>
 
-                    <input type="submit" class="btn btn-primary mt-5" value="Add new animal">
+                    <input type="submit" class="btn btn-primary mt-5" value="Update {{$animal->name}}">
                 </form>
             </div>
         </div>
