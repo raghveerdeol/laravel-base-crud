@@ -3,6 +3,13 @@
 @section('title','Homepage')
 
 @section('main-content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <a class="btn btn-primary btn-xl my-3" href="{{ route('pages.create') }}" role="button">Add New Animal</a>
+        </div>
+    </div>
+</div>
     <table class="table">
         <thead>
             <tr>
