@@ -42,7 +42,11 @@
                 <td>
                     <a class="btn btn-primary btn-sm" href="{{ route('pages.show', $animal) }}" role="button">Show</a>
                     <a class="btn btn-success btn-sm" href="{{ route('pages.edit', $animal) }}" role="button">Edit</a>
-                    <a class="btn btn-danger btn-sm" href="#" role="button">Delete</a>
+                    <form action="{{ route('pages.destroy', $animal)}}" class="d-inline-block" method="POST">
+                        @method('DELETE')
+                        @csrf
+                        <input class="btn btn-danger btn-sm" type="submit" value="Delete" role="button"></input>
+                    </form>
                 </td>
             </tr>
             @endforeach

@@ -19,8 +19,12 @@
                     <p class="card-text">Not Protected</p>
                     @endif
                     <td>
-                    <a class="btn btn-danger btn-sm" href="#" role="button">Delete</a>
-                    <a class="btn btn-success btn-sm" href="#" role="button">Edite</a>
+                    <form action="{{ route('pages.destroy', $animal)}}" class="d-inline-block" method="POST">
+                        @method('DELETE')
+                        @csrf
+                        <input class="btn btn-danger btn-sm" type="submit" value="Delete" role="button"></input>
+                    </form>
+                    <a class="btn btn-success btn-sm" href="{{ route('pages.edit', $animal) }}" role="button">Edit</a>
                 </div>
             </div>
         </div>

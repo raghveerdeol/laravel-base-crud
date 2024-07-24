@@ -52,4 +52,9 @@ class AnimalController extends Controller
         $animal->update($data);
         return redirect()->route('pages.show', $animal);
     }
+
+    public function destroy(Animal $animal){
+        $animal->delete();
+        return redirect()->route('pages.home');
+    }
 }
