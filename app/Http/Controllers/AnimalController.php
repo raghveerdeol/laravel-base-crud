@@ -42,4 +42,9 @@ class AnimalController extends Controller
         $newAnimal = Animal::create($data);
         return redirect()->route('pages.show', $newAnimal);
     }
+
+    public function edit(Animal $animal){
+
+        return view('pages.edit', compact('animal'));
+    }
 }
