@@ -11,6 +11,16 @@
         </div>
     </div>
 
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error )
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -18,31 +28,31 @@
                     @method('PUT')
                     @csrf
                     <label for="scientific_name">Scientific name</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Scientific name" aria-label="Scientific name" id="scientific-name" name="scientific_name" value="{{ $animal->scientific_name}}">
+                    <input class="form-control form-control-sm" type="text" placeholder="Scientific name" aria-label="Scientific name" id="scientific-name" name="scientific_name" value="{{ old('scientific_name', $animal->scientific_name)}}">
 
                     <label for="common_name">Common name</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Common name" aria-label="Common name" id="common-name" name="common_name" value="{{ $animal->common_name}}">
+                    <input class="form-control form-control-sm" type="text" placeholder="Common name" aria-label="Common name" id="common-name" name="common_name" value="{{ old('common_name', $animal->common_name)}}">
 
                     <label for="name">Name</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Name" aria-label="Name" id="name" name="name" value="{{ $animal->name}}">
+                    <input class="form-control form-control-sm" type="text" placeholder="Name" aria-label="Name" id="name" name="name" value="{{ old('name', $animal->name) }}">
 
                     <label for="birthday">Birthday</label>
-                    <input class="form-control form-control-sm" type="date" placeholder="Birthday" aria-label="Birthday" id="scientific-name" name="birthday" value="{{ $animal->birthday}}">
+                    <input class="form-control form-control-sm" type="date" placeholder="Birthday" aria-label="Birthday" id="scientific-name" name="birthday" value="{{ old('birthday', $animal->birthday) }}">
 
                     <label for="taxonomic_group">Taxonomic Group</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Taxonomic Group" aria-label="Taxonomic Group" id="scientific-name" name="taxonomic_group" value="{{ $animal->taxonomic_group}}">
+                    <input class="form-control form-control-sm" type="text" placeholder="Taxonomic Group" aria-label="Taxonomic Group" id="scientific-name" name="taxonomic_group" value="{{ old('taxonomic_group', $animal->taxonomic_group) }}">
 
                     <label for="class">Class</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Class" aria-label="Class" id="scientific-name" name="class" value="{{ $animal->class}}">
+                    <input class="form-control form-control-sm" type="text" placeholder="Class" aria-label="Class" id="scientific-name" name="class" value="{{ old('class', $animal->class) }}">
 
                     <label for="family">Family</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Family" aria-label="Family" id="scientific-name" name="family" value="{{ $animal->family}}">
+                    <input class="form-control form-control-sm" type="text" placeholder="Family" aria-label="Family" id="scientific-name" name="family" value="{{ old('family', $animal->family)}}">
 
                     <label for="species">Species</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Species" aria-label="Species" id="scientific-name" name="species" value="{{ $animal->species}}">
+                    <input class="form-control form-control-sm" type="text" placeholder="Species" aria-label="Species" id="scientific-name" name="species" value="{{ old('species', $animal->species) }}">
 
                     <label for="habitat">Habitat</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Habitat" aria-label="Habitat" id="scientific-name" name="habitat" value="{{ $animal->habitat}}">
+                    <input class="form-control form-control-sm" type="text" placeholder="Habitat" aria-label="Habitat" id="scientific-name" name="habitat" value="{{ old('habitat', $animal->habitat) }}">
 
                     {{-- <label for="protected">Protected</label>
                     <input class="form-control form-control-sm" type="text" placeholder="Protected" aria-label="Protected" id="scientific-name" name="protected"> --}}

@@ -48,6 +48,18 @@ class AnimalController extends Controller
 
     public function update(Request $request, Animal $animal){
         $data = $request->all();
+        $request->validate([
+            'scientific_name' => 'required|max:60',
+            'common_name' => 'required|max:40',
+            'name' => 'required|max:40',
+            'birthday' => 'required',
+            'taxonomic_group' => 'required|max:60',
+            'class' => 'required|max:50',
+            'family' => 'required|max:50',
+            'species' => 'required|max:50',
+            'habitat' => 'required|max:50',
+            'protected' => 'required',
+        ]);
         $animal->update($data);
         return redirect()->route('pages.show', $animal);
     }
