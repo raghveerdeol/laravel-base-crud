@@ -26,31 +26,31 @@
                 <form action="{{ route('pages.store') }}" method="POST">
                     @csrf
                     <label for="scientific_name">Scientific name</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Scientific name" aria-label="Scientific name" id="scientific-name" name="scientific_name">
+                    <input class="form-control form-control-sm" type="text" placeholder="Scientific name" aria-label="Scientific name" id="scientific-name" name="scientific_name" value="{{ old('scientific_name') }}">
 
                     <label for="common_name">Common name</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Common name" aria-label="Common name" id="common-name" name="common_name">
+                    <input class="form-control form-control-sm" type="text" placeholder="Common name" aria-label="Common name" id="common-name" name="common_name" value="{{ old('common_name') }}">
 
                     <label for="name">Name</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Name" aria-label="Name" id="name" name="name">
+                    <input class="form-control form-control-sm" type="text" placeholder="Name" aria-label="Name" id="name" name="name" value="{{ old('name') }}">
 
                     <label for="birthday">Birthday</label>
-                    <input class="form-control form-control-sm" type="date" placeholder="Birthday" aria-label="Birthday" id="scientific-name" name="birthday">
+                    <input class="form-control form-control-sm" type="date" placeholder="Birthday" aria-label="Birthday" id="scientific-name" name="birthday" value="{{ old('birthday') }}">
 
                     <label for="taxonomic_group">Taxonomic Group</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Taxonomic Group" aria-label="Taxonomic Group" id="scientific-name" name="taxonomic_group">
+                    <input class="form-control form-control-sm" type="text" placeholder="Taxonomic Group" aria-label="Taxonomic Group" id="scientific-name" name="taxonomic_group" value="{{ old('taxonomic_group') }}">
 
                     <label for="class">Class</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Class" aria-label="Class" id="scientific-name" name="class">
+                    <input class="form-control form-control-sm" type="text" placeholder="Class" aria-label="Class" id="scientific-name" name="class" value="{{ old('class') }}">
 
                     <label for="family">Family</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Family" aria-label="Family" id="scientific-name" name="family">
+                    <input class="form-control form-control-sm" type="text" placeholder="Family" aria-label="Family" id="scientific-name" name="family" value="{{ old('family') }}">
 
                     <label for="species">Species</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Species" aria-label="Species" id="scientific-name" name="species">
+                    <input class="form-control form-control-sm" type="text" placeholder="Species" aria-label="Species" id="scientific-name" name="species" value="{{ old('species') }}">
 
                     <label for="habitat">Habitat</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Habitat" aria-label="Habitat" id="scientific-name" name="habitat">
+                    <input class="form-control form-control-sm" type="text" placeholder="Habitat" aria-label="Habitat" id="scientific-name" name="habitat" value="{{ old('habitat') }}">
 
                     {{-- <label for="protected">Protected</label>
                     <input class="form-control form-control-sm" type="text" placeholder="Protected" aria-label="Protected" id="scientific-name" name="protected"> --}}
