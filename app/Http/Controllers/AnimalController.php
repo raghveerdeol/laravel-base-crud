@@ -26,19 +26,18 @@ class AnimalController extends Controller
     public function store(Request $request){
         $data = $request->all();
 
-        // $newAnimal = new Animal();
-        // $newAnimal->scientific_name = $data['scientific_name'];
-        // $newAnimal->common_name = $data['common_name'];
-        // $newAnimal->name = $data['name'];
-        // $newAnimal->birthday = $data['birthday'];
-        // $newAnimal->taxonomic_group = $data['taxonomic_group'];
-        // $newAnimal->class = $data['class'];
-        // $newAnimal->family = $data['family'];
-        // $newAnimal->species = $data['species'];
-        // $newAnimal->habitat = $data['habitat'];
-        // $newAnimal->protected = $data['protected'];
-        // $newAnimal->save();
-        // dd($newAnimal);
+        $request->validate([
+            'scientific_name' => 'required|max:60',
+            'common_name' => 'required|max:40',
+            'name' => 'required|max:40',
+            'birthday' => 'required',
+            'taxonomic_group' => 'required|max:60',
+            'class' => 'required|max:50',
+            'family' => 'required|max:50',
+            'species' => 'required|max:50',
+            'habitat' => 'required|max:50',
+            'protected' => 'required',
+        ]);
         $newAnimal = Animal::create($data);
         return redirect()->route('pages.show', $newAnimal);
     }
